@@ -44,6 +44,12 @@ public class TeamTest {
        assertEquals(false, team.equals("team"));
     }
     @Test
+    public void equal_returns_different_members() {
+       Team other = new Team("test-team");
+       other.addMember("Alley");
+       assertEquals(false, team.equals(other));
+    }
+    @Test
     public void equal_returns_same_object() {
        assertEquals(true, team.equals(team));
     }
